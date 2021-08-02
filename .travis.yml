@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -t samferd/react-frontend -f Dockerfile.dev .
 script:
-  - docker run samferd/react-frontend npm run test -- --coverage
+  - docker run -e CI=true samferd/react-frontend npm run test
